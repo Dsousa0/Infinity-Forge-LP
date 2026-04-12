@@ -22,7 +22,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   // Asset URLs from webdev project CDN
   const heroImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/hero-forge-abstract-iPEXvMxdGotN4bfWssvZBA.webp";
-  const techStackImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/tech-stack-visual-XSRFEqbAVMzQ4FWgzgtfL5.webp";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -32,7 +31,7 @@ export default function Home() {
         <ProblemSection />
         <AgileForgSection />
         <ServicesSection />
-        <DifferentialsSection techStackImageUrl={techStackImageUrl} />
+        <DifferentialsSection />
         <HowToStartSection />
         <AboutSection />
         <CTAFinalSection />

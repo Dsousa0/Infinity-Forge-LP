@@ -3,11 +3,7 @@ interface Differential {
   description: string;
 }
 
-interface DifferentialsSectionProps {
-  techStackImageUrl?: string;
-}
-
-export default function DifferentialsSection({ techStackImageUrl }: DifferentialsSectionProps) {
+export default function DifferentialsSection() {
   const differentials: Differential[] = [
     {
       title: "Arquitetura orientada a domínio",
@@ -50,16 +46,6 @@ export default function DifferentialsSection({ techStackImageUrl }: Differential
           </p>
         </div>
 
-        {/* Tech Stack Image */}
-        {techStackImageUrl && (
-          <div className="mb-16 rounded-lg overflow-hidden border border-border/30">
-            <img
-              src={techStackImageUrl}
-              alt="Tech Stack"
-              className="w-full h-auto"
-            />
-          </div>
-        )}
 
         {/* Differentials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
