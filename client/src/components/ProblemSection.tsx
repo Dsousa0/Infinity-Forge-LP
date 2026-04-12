@@ -8,37 +8,27 @@ export default function ProblemSection() {
 
   return (
     <section className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-12 text-foreground">
+      <div className="container">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-12 text-4xl font-bold text-foreground md:text-5xl">
             Seu software não pode esperar
             <br />
-            <span className="text-accent">meses para existir</span>
+            <span className="text-primary">meses para existir</span>
           </h2>
 
-          {/* Problem Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {problems.map((problem, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-lg border border-border/30 bg-card/50 hover:border-accent/50 transition-all duration-300 group"
-              >
+              <div key={index} className="nordic-panel nordic-panel-hover group">
                 <div className="flex items-start gap-4">
-                  <div className="text-2xl text-destructive flex-shrink-0 mt-1">❌</div>
-                  <p className="text-lg font-mono text-foreground group-hover:text-accent transition-colors">
-                    {problem}
-                  </p>
+                  <div className="mt-1 text-xl text-accent">ᛉ</div>
+                  <p className="text-lg font-mono text-foreground transition-colors group-hover:text-primary">{problem}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Transition Message */}
-          <div className="mt-12 p-8 rounded-lg border border-accent/30 bg-accent/5">
-            <p className="text-xl font-mono text-accent">
-              👉 A InfinityForge nasceu para resolver exatamente isso.
-            </p>
+          <div className="nordic-panel mt-12">
+            <p className="text-xl font-mono text-primary">A InfinityForge nasceu para resolver exatamente isso.</p>
           </div>
         </div>
       </div>

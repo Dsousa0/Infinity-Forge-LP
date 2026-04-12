@@ -9,75 +9,51 @@ interface Step {
 export default function HowToStartSection() {
   const steps: Step[] = [
     {
-      number: "1️⃣",
+      number: "01",
       title: "Conversa estratégica",
-      description: "30 minutos para entender seus objetivos e desafios",
+      description: "Entendemos objetivos, contexto técnico e riscos prioritários.",
     },
     {
-      number: "2️⃣",
+      number: "02",
       title: "Proposta técnica clara",
-      description: "Plano detalhado com timeline, tecnologias e investimento",
+      description: "Plano com arquitetura, escopo incremental e previsibilidade de investimento.",
     },
     {
-      number: "3️⃣",
-      title: "Primeira Sprint em poucos dias",
-      description: "Começamos a trabalhar imediatamente com resultados visíveis",
+      number: "03",
+      title: "Primeira sprint em poucos dias",
+      description: "Execução rápida com entregas visíveis desde o início.",
     },
   ];
 
   return (
     <section className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-4xl">
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
             Começar é
             <br />
-            <span className="text-accent">simples</span>
+            <span className="text-primary">simples</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Três passos para transformar sua ideia em realidade
-          </p>
+          <p className="text-lg text-muted-foreground">Três passos para transformar visão em plataforma.</p>
         </div>
 
-        {/* Steps */}
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-8">
-            {steps.map((step, index) => (
-              <div key={index} className="flex gap-8 items-start">
-                {/* Number */}
-                <div className="flex-shrink-0">
-                  <div className="text-5xl">{step.number}</div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-grow pt-2">
-                  <h3 className="text-2xl font-mono font-bold text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-lg text-muted-foreground">
-                    {step.description}
-                  </p>
-                </div>
-
-                {/* Divider */}
-                {index < steps.length - 1 && (
-                  <div className="absolute left-12 w-0.5 h-24 bg-gradient-to-b from-accent to-transparent mt-20" />
-                )}
+        <div className="mx-auto max-w-4xl space-y-6">
+          {steps.map((step) => (
+            <div key={step.number} className="nordic-panel flex items-start gap-6">
+              <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent/60 bg-accent/10 font-mono font-semibold text-accent">
+                {step.number}
               </div>
-            ))}
-          </div>
+              <div>
+                <h3 className="mb-2 text-2xl font-bold text-foreground">{step.title}</h3>
+                <p className="text-lg text-muted-foreground">{step.description}</p>
+              </div>
+            </div>
+          ))}
 
-          {/* CTA */}
-          <div className="mt-16 p-8 rounded-lg border border-accent/30 bg-accent/5 text-center">
-            <p className="text-lg text-muted-foreground mb-6">
-              Pronto para começar?
-            </p>
-            <Button
-              size="lg"
-              className="font-mono font-semibold bg-accent hover:bg-accent/90 text-background text-base"
-            >
-              👉 Agendar Diagnóstico Gratuito
+          <div className="nordic-panel mt-10 text-center">
+            <p className="mb-6 text-lg text-muted-foreground">Pronto para começar?</p>
+            <Button size="lg" className="rounded-xl bg-accent px-8 font-mono text-base text-accent-foreground hover:bg-accent/90">
+              Agendar Diagnóstico Gratuito
             </Button>
           </div>
         </div>

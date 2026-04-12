@@ -38,7 +38,7 @@ export default function AboutSection() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg border border-border/30 bg-card/50 hover:border-accent/50 transition-all duration-300 group"
+              className="nordic-panel nordic-panel-hover group"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
@@ -59,7 +59,7 @@ export default function AboutSection() {
         </div>
 
         {/* Message */}
-        <div className="mt-16 p-8 rounded-lg border border-accent/30 bg-accent/5 text-center max-w-3xl mx-auto">
+        <div className="nordic-panel mt-16 max-w-3xl mx-auto text-center">
           <p className="text-lg text-foreground leading-relaxed">
             Humanizamos sem perder autoridade. Somos técnicos, mas entendemos negócio. Somos ágeis, mas
             entregamos qualidade. Somos parceiros, não fornecedores.

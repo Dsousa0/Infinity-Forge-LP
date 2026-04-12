@@ -66,7 +66,7 @@ export default function DifferentialsSection({ techStackImageUrl }: Differential
           {differentials.map((diff, index) => (
             <div
               key={index}
-              className="p-6 rounded-lg border border-border/30 bg-card/50 hover:border-accent/50 transition-all duration-300 group"
+              className="nordic-panel nordic-panel-hover group"
             >
               {/* Number */}
               <div className="mb-4">

@@ -6,11 +6,10 @@ interface HeroSectionProps {
 
 export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image */}
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
       {heroImageUrl && (
         <div
-          className="absolute inset-0 z-0 opacity-40"
+          className="absolute inset-0 z-0 opacity-15 mix-blend-multiply"
           style={{
             backgroundImage: `url('${heroImageUrl}')`,
             backgroundSize: "cover",
@@ -19,56 +18,41 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
         />
       )}
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-1 bg-gradient-to-b from-background via-background/80 to-background" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="max-w-3xl mx-auto text-center fade-in-up">
-          {/* Badges */}
-          <div className="flex flex-wrap gap-3 justify-center mb-8">
-            <div className="tech-badge">🔥 Agile Driven</div>
-            <div className="tech-badge">☁️ Cloud Native</div>
-            <div className="tech-badge">🚀 DevOps Ready</div>
+      <div className="container relative z-10 py-20">
+        <div className="mx-auto max-w-4xl text-center fade-in-up">
+          <div className="mb-7 flex flex-wrap justify-center gap-3">
+            <span className="rune-chip">ᚱ Engenharia Nórdica</span>
+            <span className="rune-chip">ᚠ Produto Escalável</span>
+            <span className="rune-chip">ᛟ Entrega Contínua</span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="hero-text text-5xl md:text-7xl font-mono font-bold mb-6 text-foreground">
-            Forjando Sistemas
+          <h1 className="hero-text mb-7 text-5xl font-bold text-foreground md:text-7xl">
+            Software com alma
             <br />
-            <span className="text-accent">Escaláveis</span> com
+            <span className="text-primary">escandinava</span> e rigor
             <br />
-            Agilidade Infinita
+            de engenharia
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-            Transformamos ideias complexas em plataformas digitais robustas através de desenvolvimento ágil,
-            arquitetura moderna e entregas contínuas.
+          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+            Criamos plataformas robustas com simplicidade elegante: interfaces limpas, arquitetura sólida e uma experiência
+            premium inspirada na estética nórdica da sua marca.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="font-mono font-semibold bg-accent hover:bg-accent/90 text-background text-base"
-            >
-              👉 Iniciar Meu Projeto
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Button size="lg" className="rounded-xl bg-primary px-8 font-mono text-base text-primary-foreground hover:bg-primary/90">
+              Iniciar Meu Projeto
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="font-mono font-semibold border-accent/50 text-accent hover:bg-accent/10 text-base"
-            >
-              👉 Ver Como Trabalhamos
+            <Button size="lg" variant="outline" className="rounded-xl border-primary/60 px-8 font-mono text-base text-primary hover:bg-primary/10">
+              Conhecer o Método
             </Button>
           </div>
+          <div className="mt-10 flex justify-center">
+            <div className="ornament-line" />
+          </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="text-accent text-2xl">↓</div>
       </div>
     </section>
   );
