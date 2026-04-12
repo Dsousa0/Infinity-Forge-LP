@@ -10,20 +10,20 @@ export default function ServicesSection() {
     {
       icon: "ᚢ",
       title: "Sistemas Web Sob Medida",
-      description: "Plataformas robustas com estrutura clara e preparada para evolução.",
-      items: ["Dashboards corporativos", "ERPs personalizados", "Plataformas SaaS", "Integrações complexas"],
+      description: "Plataformas de alta complexidade com arquitetura modular, prontas para sustentar o crescimento do seu negócio.",
+      items: ["BI & Dashboards Corporativos", "Sistemas ERP & CRM Customizados", "Ecossistemas SaaS Escaláveis", "Integrações e APIs de Terceiros"],
     },
     {
       icon: "ᛒ",
       title: "Aplicativos de Alta Performance",
-      description: "Experiências mobile fluidas com foco em estabilidade e velocidade.",
-      items: ["Nativo ou híbrido", "APIs escaláveis", "UX orientado a conversão"],
+      description: "Experiências mobile nativas e híbridas desenvolvidas com foco em responsividade, estabilidade e performance extrema.",
+      items: ["Desenvolvimento Nativo (iOS/Android) ou Híbrido", "Arquitetura Mobile-First", "Backends de Alta Disponibilidade", "UX/UI focada em Retenção e Conversão"],
     },
     {
       icon: "ᛞ",
       title: "Cloud & DevOps Engineering",
-      description: "Infraestrutura confiável para crescer com segurança.",
-      items: ["Infraestrutura em nuvem", "CI/CD automatizado", "Containers", "Arquitetura escalável"],
+      description: "Infraestrutura resiliente e automação inteligente para garantir segurança e agilidade no ciclo de vida do software.",
+      items: ["Arquitetura em Nuvem", "Pipeline de CI/CD e Automação de Testes", "Orquestração de Containers", "Monitoramento e Observabilidade 24/7"],
     },
   ];
 
@@ -36,7 +36,7 @@ export default function ServicesSection() {
             <br />
             <span className="text-primary">escala sustentável</span>
           </h2>
-          <p className="text-lg text-muted-foreground">Arquitetura, produto e operação com uma única visão.</p>
+          <p className="text-lg text-muted-foreground">Arquitetura, produto e engenharia integrados em uma visão de longo prazo</p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

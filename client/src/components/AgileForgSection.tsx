@@ -9,22 +9,22 @@ export default function AgileForgSection() {
     {
       icon: "ᚠ",
       title: "Discovery Forge",
-      description: "Imersão no negócio, definição técnica objetiva e desenho do MVP estratégico.",
+      description: "Imersão profunda no ecossistema do negócio, definição de requisitos técnicos e arquitetura estratégica para um MVP de alto impacto.",
     },
     {
       icon: "ᛟ",
       title: "Sprint Build",
-      description: "Ciclos curtos com entregas reais, validação contínua e deploy frequente.",
+      description: "Ciclos ágeis de desenvolvimento com entregas tangíveis. Validação contínua de funcionalidades e deploys em alta frequência.",
     },
     {
       icon: "ᚱ",
       title: "Transparent Flow",
-      description: "Visibilidade total da evolução, métricas claras e comunicação sem ruído.",
+      description: "Monitoramento total da evolução do projeto através de métricas de performance e comunicação direta, garantindo um fluxo livre de ruídos.",
     },
     {
       icon: "ᚷ",
       title: "Scale & Optimize",
-      description: "Evolução orientada por dados, performance e estabilidade em produção.",
+      description: "Otimização contínua baseada em dados reais. Escalonamento de infraestrutura, foco em estabilidade e máxima performance em produção.",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function AgileForgSection() {
       <div className="container">
         <div className="mx-auto mb-16 max-w-4xl">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">O Método Forge</h2>
-          <p className="text-lg text-muted-foreground">Execução enxuta, estética limpa e previsibilidade de entrega.</p>
+          <p className="text-lg text-muted-foreground">Engenharia de alta precisão, interfaces intuitivas e cronogramas sem imprevistos</p>
         </div>
 
 
@@ -51,7 +51,7 @@ export default function AgileForgSection() {
         </div>
 
         <div className="nordic-panel mt-16 text-center">
-          <p className="text-xl font-mono font-bold text-primary md:text-2xl">Resultado frequente, sem mar aberto de incerteza.</p>
+          <p className="text-xl font-mono font-bold text-primary md:text-2xl">Resultados consistentes em terra firme, longe do mar de incertezas</p>
         </div>
       </div>
     </section>

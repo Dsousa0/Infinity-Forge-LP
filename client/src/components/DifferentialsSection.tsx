@@ -7,27 +7,27 @@ export default function DifferentialsSection() {
   const differentials: Differential[] = [
     {
       title: "Arquitetura orientada a domínio",
-      description: "Design focado em regras de negócio, não em frameworks",
+      description: "Sistemas que espelham seu negócio. Arquitetura desenhada para evoluir com as suas regras, independente das tecnologias de mercado",
     },
     {
       title: "Microsserviços quando necessário",
-      description: "Escalabilidade sem complexidade desnecessária",
+      description: "Escalabilidade consciente. Desenvolvemos sistemas modulares que crescem conforme a demanda, evitando o custo da complexidade prematura",
     },
     {
       title: "Código versionado e auditável",
-      description: "Rastreabilidade completa de todas as mudanças",
+      description: "Transparência técnica total. Rastreabilidade completa e histórico de evolução para garantir a integridade e a segurança do seu ativo digital",
     },
     {
       title: "Observabilidade desde o dia zero",
-      description: "Monitoramento integrado desde o início do projeto",
+      description: "Visibilidade total do sistema. Implementamos métricas e logs em tempo real para identificar e resolver problemas antes mesmo que eles afetem o usuário",
     },
     {
       title: "Segurança integrada",
-      description: "Práticas de segurança em todas as camadas",
+      description: "Segurança nativa. Proteção de dados e blindagem de aplicações integradas em cada etapa do ciclo de vida do desenvolvimento.",
     },
     {
       title: "Performance como requisito",
-      description: "Otimização contínua desde a arquitetura",
+      description: "Software de alta resposta. A performance não é um ajuste final, é uma diretriz arquitetural para garantir velocidade e eficiência sob carga",
     },
   ];
 
@@ -39,10 +39,10 @@ export default function DifferentialsSection() {
           <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">
             Engenharia de Software,
             <br />
-            <span className="text-accent">não apenas desenvolvimento</span>
+            <span className="text-accent">Não apenas desenvolvimento</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Diferenciais técnicos que garantem qualidade e longevidade
+            Engenharia de Software de alto nível: construindo legados, não apenas código
           </p>
         </div>
 

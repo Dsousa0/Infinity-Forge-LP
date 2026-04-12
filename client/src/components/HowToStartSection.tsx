@@ -20,7 +20,7 @@ export default function HowToStartSection() {
     },
     {
       number: "03",
-      title: "Primeira sprint em poucos dias",
+      title: "Primeiro sprint em poucos dias",
       description: "Execução rápida com entregas visíveis desde o início.",
     },
   ];

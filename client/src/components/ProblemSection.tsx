@@ -28,7 +28,7 @@ export default function ProblemSection() {
           </div>
 
           <div className="nordic-panel mt-12">
-            <p className="text-xl font-mono text-primary">A InfinityForge nasceu para resolver exatamente isso.</p>
+            <p className="text-xl font-mono text-primary">A Infinity Forge nasceu para resolver exatamente isso.</p>
           </div>
         </div>
       </div>

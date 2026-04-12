@@ -23,22 +23,21 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
       <div className="container relative z-10 py-20">
         <div className="mx-auto max-w-4xl text-center fade-in-up">
           <div className="mb-7 flex flex-wrap justify-center gap-3">
-            <span className="rune-chip">ᚱ Engenharia Nórdica</span>
+            <span className="rune-chip">ᚱ Engenharia de Sofware</span>
             <span className="rune-chip">ᚠ Produto Escalável</span>
             <span className="rune-chip">ᛟ Entrega Contínua</span>
           </div>
 
           <h1 className="hero-text mb-7 text-5xl font-bold text-foreground md:text-7xl">
-            Software com alma
+            Software com DNA
             <br />
-            <span className="text-primary">escandinava</span> e rigor
+            <span className="text-primary">inovador</span> e o rigor
             <br />
-            de engenharia
+            da  <span className="text-primary">engenharia</span>
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Criamos plataformas robustas com simplicidade elegante: interfaces limpas, arquitetura sólida e uma experiência
-            premium inspirada na estética nórdica da sua marca.
+            Transformamos complexidade em fluidez: plataformas de arquitetura sólida com interfaces limpas, entregando a experiência premium que sua marca merece.
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
