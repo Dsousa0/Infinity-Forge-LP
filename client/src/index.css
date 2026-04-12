@@ -43,101 +43,106 @@
 }
 
 :root {
-  --primary: oklch(0.623 0.214 259.815);
-  --primary-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.623 0.214 259.815);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --chart-1: oklch(0.623 0.214 259.815);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.623 0.214 259.815);
-  --chart-4: oklch(0.623 0.214 259.815);
-  --chart-5: oklch(0.623 0.214 259.815);
-  --radius: 0.65rem;
-  --background: oklch(0.08 0.002 0);
-  --foreground: oklch(0.95 0.001 0);
-  --card: oklch(0.12 0.002 0);
-  --card-foreground: oklch(0.95 0.001 0);
-  --popover: oklch(0.12 0.002 0);
-  --popover-foreground: oklch(0.95 0.001 0);
-  --secondary: oklch(0.15 0.003 0);
-  --secondary-foreground: oklch(0.9 0.001 0);
-  --muted: oklch(0.25 0.005 0);
-  --muted-foreground: oklch(0.7 0.001 0);
-  --accent: oklch(0.623 0.214 259.815);
-  --accent-foreground: oklch(0.08 0.002 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.12 0.002 0);
-  --sidebar-foreground: oklch(0.95 0.001 0);
-  --sidebar-accent: oklch(0.623 0.214 259.815);
-  --sidebar-accent-foreground: oklch(0.08 0.002 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --radius: 1rem;
+  --background: #eceadf;
+  --foreground: #132730;
+  --card: #f7f5ee;
+  --card-foreground: #132730;
+  --popover: #f7f5ee;
+  --popover-foreground: #132730;
+  --primary: #0f4c5c;
+  --primary-foreground: #f7f5ee;
+  --secondary: #d9d4c6;
+  --secondary-foreground: #17343e;
+  --muted: #d5cfbf;
+  --muted-foreground: #52646d;
+  --accent: #b98942;
+  --accent-foreground: #f8f4ea;
+  --destructive: #b33b2f;
+  --destructive-foreground: #fff;
+  --border: #c7c2b2;
+  --input: #d6d0c0;
+  --ring: #0f4c5c;
+  --chart-1: #0f4c5c;
+  --chart-2: #b98942;
+  --chart-3: #395f6a;
+  --chart-4: #c9ab6f;
+  --chart-5: #183743;
+  --sidebar: #f2eee3;
+  --sidebar-foreground: #132730;
+  --sidebar-primary: #0f4c5c;
+  --sidebar-primary-foreground: #f8f4ea;
+  --sidebar-accent: #b98942;
+  --sidebar-accent-foreground: #f8f4ea;
+  --sidebar-border: #c7c2b2;
+  --sidebar-ring: #0f4c5c;
 }
 
 .dark {
-  --primary: oklch(0.623 0.214 259.815);
-  --primary-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.623 0.214 259.815);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --background: oklch(0.08 0.002 0);
-  --foreground: oklch(0.95 0.001 0);
-  --card: oklch(0.12 0.002 0);
-  --card-foreground: oklch(0.95 0.001 0);
-  --popover: oklch(0.12 0.002 0);
-  --popover-foreground: oklch(0.95 0.001 0);
-  --secondary: oklch(0.15 0.003 0);
-  --secondary-foreground: oklch(0.9 0.001 0);
-  --muted: oklch(0.25 0.005 0);
-  --muted-foreground: oklch(0.7 0.001 0);
-  --accent: oklch(0.623 0.214 259.815);
-  --accent-foreground: oklch(0.08 0.002 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.623 0.214 259.815);
-  --chart-1: oklch(0.623 0.214 259.815);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.623 0.214 259.815);
-  --chart-4: oklch(0.623 0.214 259.815);
-  --chart-5: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.12 0.002 0);
-  --sidebar-foreground: oklch(0.95 0.001 0);
-  --sidebar-accent: oklch(0.623 0.214 259.815);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: #0f1920;
+  --foreground: #e8ece5;
+  --card: #132730;
+  --card-foreground: #e8ece5;
+  --popover: #132730;
+  --popover-foreground: #e8ece5;
+  --primary: #6fb0c0;
+  --primary-foreground: #0f1920;
+  --secondary: #1b323d;
+  --secondary-foreground: #e8ece5;
+  --muted: #223843;
+  --muted-foreground: #95a7ad;
+  --accent: #d2aa68;
+  --accent-foreground: #0f1920;
+  --destructive: #dc4f3f;
+  --destructive-foreground: #fff;
+  --border: #2e4751;
+  --input: #29424c;
+  --ring: #6fb0c0;
+  --chart-1: #6fb0c0;
+  --chart-2: #d2aa68;
+  --chart-3: #7f9ea8;
+  --chart-4: #ead4aa;
+  --chart-5: #9ec8d2;
+  --sidebar: #132730;
+  --sidebar-foreground: #e8ece5;
+  --sidebar-primary: #6fb0c0;
+  --sidebar-primary-foreground: #0f1920;
+  --sidebar-accent: #d2aa68;
+  --sidebar-accent-foreground: #0f1920;
+  --sidebar-border: #2e4751;
+  --sidebar-ring: #6fb0c0;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Roboto', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: "Roboto", sans-serif;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgb(15 76 92 / 0.08), transparent 30%),
+      radial-gradient(circle at 80% 15%, rgb(185 137 66 / 0.09), transparent 28%),
+      linear-gradient(120deg, rgb(255 255 255 / 0.25), transparent 45%);
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'IBM Plex Mono', monospace;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
-  h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl;
+
+  code,
+  pre {
+    font-family: "IBM Plex Mono", monospace;
   }
-  h2 {
-    @apply text-4xl md:text-5xl;
-  }
-  h3 {
-    @apply text-3xl md:text-4xl;
-  }
-  code, pre {
-    font-family: 'IBM Plex Mono', monospace;
-  }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -152,114 +157,58 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
   }
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
-}
-  /* Custom components for InfinityForge - Dark Tech Minimalist Engineering */
+
   .section-divider {
-    @apply border-b border-border/20;
+    @apply border-b border-primary/15;
   }
 
-  .cta-button {
-    @apply relative inline-block px-8 py-3 font-mono font-semibold text-white bg-accent hover:bg-accent/90 transition-all duration-300 overflow-hidden;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-  }
-
-  .cta-button::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-out;
-  }
-
-  .cta-button:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .pulse-subtle {
-    animation: pulseSubtle 2s ease-in-out infinite;
-  }
-
-  @keyframes pulseSubtle {
-    0%, 100% {
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
-  .tech-badge {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 text-accent text-sm font-mono;
+  .section-spacing {
+    @apply py-20 md:py-28;
   }
 
   .hero-text {
     @apply leading-tight tracking-tight;
   }
 
-  .section-spacing {
-    @apply py-20 md:py-32 lg:py-40;
+  .rune-chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-mono text-primary;
   }
+
+  .nordic-panel {
+    @apply rounded-2xl border border-primary/20 bg-card/80 p-6 shadow-[0_14px_30px_-22px_rgba(19,39,48,0.75)] backdrop-blur-sm;
+  }
+
+  .nordic-panel-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-accent/70 hover:shadow-[0_20px_40px_-24px_rgba(15,76,92,0.65)];
+  }
+
+  .ornament-line {
+    @apply h-px w-24 bg-gradient-to-r from-transparent via-accent/70 to-transparent;
+  }
+
+  .cta-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-accent/60 bg-accent px-6 py-3 font-mono font-semibold text-accent-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent/90;
+  }
+}

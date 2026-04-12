@@ -11,86 +11,56 @@ interface AgileForgeSectionProps {
 export default function AgileForgSection({ processImageUrl }: AgileForgeSectionProps) {
   const stages: ProcessStage[] = [
     {
-      icon: "🔥",
+      icon: "ᚠ",
       title: "Discovery Forge",
-      description: "Entendimento profundo do negócio, definição técnica rápida e MVP estratégico",
+      description: "Imersão no negócio, definição técnica objetiva e desenho do MVP estratégico.",
     },
     {
-      icon: "⚙️",
+      icon: "ᛟ",
       title: "Sprint Build",
-      description: "Sprints semanais ou quinzenais com entregas funcionais constantes e deploy contínuo",
+      description: "Ciclos curtos com entregas reais, validação contínua e deploy frequente.",
     },
     {
-      icon: "👁️",
+      icon: "ᚱ",
       title: "Transparent Flow",
-      description: "Cliente acompanha tudo, dashboard de progresso e comunicação direta com devs",
+      description: "Visibilidade total da evolução, métricas claras e comunicação sem ruído.",
     },
     {
-      icon: "🚀",
+      icon: "ᚷ",
       title: "Scale & Optimize",
-      description: "Monitoramento contínuo, performance e evolução contínua do sistema",
+      description: "Evolução orientada por dados, performance e estabilidade em produção.",
     },
   ];
 
   return (
     <section id="process" className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">
-            O Agile Forge
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Nosso método de construção exclusivo que garante resultados contínuos
-          </p>
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-4xl">
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">O Método Forge</h2>
+          <p className="text-lg text-muted-foreground">Execução enxuta, estética limpa e previsibilidade de entrega.</p>
         </div>
 
-        {/* Process Image */}
         {processImageUrl && (
-          <div className="mb-16 rounded-lg overflow-hidden border border-border/30">
-            <img
-              src={processImageUrl}
-              alt="Agile Forge Process"
-              className="w-full h-auto"
-            />
+          <div className="mb-16 overflow-hidden rounded-2xl border border-primary/20 shadow-sm">
+            <img src={processImageUrl} alt="Agile Forge Process" className="h-auto w-full" />
           </div>
         )}
 
-        {/* Process Stages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {stages.map((stage, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-lg border border-border/30 bg-card/50 hover:border-accent/50 transition-all duration-300 group"
-            >
-              {/* Stage Number */}
-              <div className="mb-4">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-accent/50 group-hover:border-accent transition-colors">
-                  <span className="text-lg font-mono font-bold text-accent">{index + 1}</span>
-                </div>
+            <div key={index} className="nordic-panel nordic-panel-hover group">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 bg-primary/10">
+                <span className="font-mono text-lg font-bold text-primary">{index + 1}</span>
               </div>
-
-              {/* Icon */}
-              <div className="text-4xl mb-4">{stage.icon}</div>
-
-              {/* Title */}
-              <h3 className="text-lg font-mono font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                {stage.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {stage.description}
-              </p>
+              <div className="mb-3 font-mono text-2xl text-accent">{stage.icon}</div>
+              <h3 className="mb-3 text-lg font-bold text-foreground transition-colors group-hover:text-primary">{stage.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{stage.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Key Message */}
-        <div className="mt-16 p-8 rounded-lg border border-accent/30 bg-accent/5 text-center">
-          <p className="text-xl md:text-2xl font-mono font-bold text-accent">
-            Você nunca fica meses sem ver resultado.
-          </p>
+        <div className="nordic-panel mt-16 text-center">
+          <p className="text-xl font-mono font-bold text-primary md:text-2xl">Resultado frequente, sem mar aberto de incerteza.</p>
         </div>
       </div>
     </section>

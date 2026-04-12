@@ -8,65 +8,48 @@ interface Service {
 export default function ServicesSection() {
   const services: Service[] = [
     {
-      icon: "🧩",
+      icon: "ᚢ",
       title: "Sistemas Web Sob Medida",
-      description: "Plataformas digitais robustas e escaláveis",
+      description: "Plataformas robustas com estrutura clara e preparada para evolução.",
       items: ["Dashboards corporativos", "ERPs personalizados", "Plataformas SaaS", "Integrações complexas"],
     },
     {
-      icon: "📱",
+      icon: "ᛒ",
       title: "Aplicativos de Alta Performance",
-      description: "Experiências mobile que impressionam",
-      items: ["Mobile nativo ou híbrido", "APIs escaláveis", "UX focado em performance"],
+      description: "Experiências mobile fluidas com foco em estabilidade e velocidade.",
+      items: ["Nativo ou híbrido", "APIs escaláveis", "UX orientado a conversão"],
     },
     {
-      icon: "☁️",
+      icon: "ᛞ",
       title: "Cloud & DevOps Engineering",
-      description: "Infraestrutura preparada para crescimento",
-      items: ["Infraestrutura em nuvem", "CI/CD automatizado", "Containers & Docker", "Arquitetura escalável"],
+      description: "Infraestrutura confiável para crescer com segurança.",
+      items: ["Infraestrutura em nuvem", "CI/CD automatizado", "Containers", "Arquitetura escalável"],
     },
   ];
 
   return (
     <section id="services" className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">
-            Soluções Criadas para
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-4xl">
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
+            Soluções criadas para
             <br />
-            <span className="text-accent">Escalar</span>
+            <span className="text-primary">escala sustentável</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            O que forjamos para seus negócios
-          </p>
+          <p className="text-lg text-muted-foreground">Arquitetura, produto e operação com uma única visão.</p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="p-8 rounded-lg border border-border/30 bg-card/50 hover:border-accent/50 transition-all duration-300 group"
-            >
-              {/* Icon */}
-              <div className="text-5xl mb-6">{service.icon}</div>
+            <div key={index} className="nordic-panel nordic-panel-hover group">
+              <div className="mb-6 font-mono text-4xl text-accent">{service.icon}</div>
+              <h3 className="mb-2 text-2xl font-bold text-foreground transition-colors group-hover:text-primary">{service.title}</h3>
+              <p className="mb-6 leading-relaxed text-muted-foreground">{service.description}</p>
 
-              {/* Title */}
-              <h3 className="text-2xl font-mono font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Items List */}
               <ul className="space-y-3">
                 {service.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start gap-3">
-                    <span className="text-accent font-bold mt-1">→</span>
+                    <span className="mt-1 text-primary">•</span>
                     <span className="text-sm text-muted-foreground">{item}</span>
                   </li>
                 ))}

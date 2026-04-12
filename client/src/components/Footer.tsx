@@ -2,106 +2,46 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t border-border/20">
-      <div className="container mx-auto px-4 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container py-14">
+        <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center">
-                <span className="font-mono font-bold text-background text-sm">∞</span>
-              </div>
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/60 bg-accent/15 text-accent">ᚠ</div>
               <span className="font-mono font-bold">InfinityForge</span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Engenharia de software para sistemas escaláveis.
-            </p>
+            <p className="text-sm text-primary-foreground/75">Engenharia de software com estética nórdica e visão de produto.</p>
           </div>
 
-          {/* Links */}
           <div>
-            <h4 className="font-mono font-bold text-sm mb-4 text-foreground">Navegação</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#process" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                  Processo
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                  Serviços
-                </a>
-              </li>
-              <li>
-                <a href="#differentials" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                  Diferenciais
-                </a>
-              </li>
+            <h4 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider text-accent">Navegação</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/75">
+              <li><a href="#process" className="hover:text-accent">Processo</a></li>
+              <li><a href="#services" className="hover:text-accent">Serviços</a></li>
+              <li><a href="#differentials" className="hover:text-accent">Diferenciais</a></li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-mono font-bold text-sm mb-4 text-foreground">Contato</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="mailto:contato@infinityforge.com"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                >
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                >
-                  GitHub
-                </a>
-              </li>
+            <h4 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider text-accent">Contato</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/75">
+              <li><a href="mailto:contato@infinityforge.com" className="hover:text-accent">Email</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent">LinkedIn</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent">GitHub</a></li>
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h4 className="font-mono font-bold text-sm mb-4 text-foreground">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                  Termos de Serviço
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                  Política de Privacidade
-                </a>
-              </li>
+            <h4 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider text-accent">Legal</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/75">
+              <li><a href="#" className="hover:text-accent">Termos de Serviço</a></li>
+              <li><a href="#" className="hover:text-accent">Política de Privacidade</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-border/20 pt-8">
-          {/* Copyright */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p>
-              © {currentYear} InfinityForge. Todos os direitos reservados.
-            </p>
-          </div>
+        <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/70">
+          © {currentYear} InfinityForge. Todos os direitos reservados.
         </div>
       </div>
     </footer>
