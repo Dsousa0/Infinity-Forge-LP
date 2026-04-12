@@ -22,7 +22,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   // Asset URLs from webdev project CDN
   const heroImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/hero-forge-abstract-iPEXvMxdGotN4bfWssvZBA.webp";
-  const processImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/agile-forge-process-TiWUVwxf5e7uoZKyHZxKmb.webp";
   const techStackImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/tech-stack-visual-XSRFEqbAVMzQ4FWgzgtfL5.webp";
 
   return (
@@ -31,7 +30,7 @@ export default function Home() {
       <main>
         <HeroSection heroImageUrl={heroImageUrl} />
         <ProblemSection />
-        <AgileForgSection processImageUrl={processImageUrl} />
+        <AgileForgSection />
         <ServicesSection />
         <DifferentialsSection techStackImageUrl={techStackImageUrl} />
         <HowToStartSection />
