@@ -4,11 +4,7 @@ interface ProcessStage {
   description: string;
 }
 
-interface AgileForgeSectionProps {
-  processImageUrl?: string;
-}
-
-export default function AgileForgSection({ processImageUrl }: AgileForgeSectionProps) {
+export default function AgileForgSection() {
   const stages: ProcessStage[] = [
     {
       icon: "ᚠ",
@@ -40,11 +36,6 @@ export default function AgileForgSection({ processImageUrl }: AgileForgeSectionP
           <p className="text-lg text-muted-foreground">Execução enxuta, estética limpa e previsibilidade de entrega.</p>
         </div>
 
-        {processImageUrl && (
-          <div className="mb-16 overflow-hidden rounded-2xl border border-primary/20 shadow-sm">
-            <img src={processImageUrl} alt="Agile Forge Process" className="h-auto w-full" />
-          </div>
-        )}
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {stages.map((stage, index) => (
