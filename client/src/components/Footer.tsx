@@ -1,9 +1,12 @@
+import RuneField from "@/components/RuneField";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-primary/15 bg-background text-foreground">
-      <div className="container py-14">
+    <footer className="relative overflow-hidden border-t border-primary/15 bg-background text-foreground">
+      <RuneField seed="footer" count={18} />
+      <div className="container relative z-10 py-14">
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-3">
