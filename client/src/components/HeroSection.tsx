@@ -8,16 +8,20 @@ interface HeroSectionProps {
 export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
   const floatingRunes = useMemo(() => {
     const runes = ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ", "ᚲ", "ᚷ", "ᚹ", "ᚺ", "ᚾ", "ᛁ", "ᛃ", "ᛇ", "ᛈ", "ᛉ", "ᛋ", "ᛏ", "ᛒ", "ᛖ", "ᛗ", "ᛚ", "ᛜ", "ᛟ"];
+    const seededValue = (index: number, seedOffset: number) => {
+      const x = Math.sin((index + 1) * 12.9898 + seedOffset * 78.233) * 43758.5453;
+      return x - Math.floor(x);
+    };
 
     return Array.from({ length: 34 }, (_, index) => ({
       id: `rune-${index}`,
-      glyph: runes[Math.floor(Math.random() * runes.length)],
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      size: `${0.95 + Math.random() * 1.2}rem`,
-      opacity: 0.25 + Math.random() * 0.45,
-      duration: `${10 + Math.random() * 8}s`,
-      delay: `${Math.random() * 5}s`,
+      glyph: runes[Math.floor(seededValue(index, 1) * runes.length)],
+      top: `${seededValue(index, 2) * 100}%`,
+      left: `${seededValue(index, 3) * 100}%`,
+      size: `${0.95 + seededValue(index, 4) * 1.2}rem`,
+      opacity: 0.25 + seededValue(index, 5) * 0.45,
+      duration: `${10 + seededValue(index, 6) * 8}s`,
+      delay: `${seededValue(index, 7) * 5}s`,
     }));
   }, []);
 
