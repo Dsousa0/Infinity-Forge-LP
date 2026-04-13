@@ -1,3 +1,5 @@
+import RuneField from "@/components/RuneField";
+
 export default function AboutSection() {
   const values = [
     {
@@ -19,8 +21,9 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
+    <section className="section-spacing section-divider relative overflow-hidden bg-background">
+      <RuneField seed="about" />
+      <div className="container relative z-10 mx-auto px-4">
         {/* Heading */}
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">

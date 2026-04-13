@@ -1,3 +1,5 @@
+import RuneField from "@/components/RuneField";
+
 interface ProcessStage {
   icon: string;
   title: string;
@@ -29,8 +31,9 @@ export default function AgileForgSection() {
   ];
 
   return (
-    <section id="process" className="section-spacing section-divider bg-background">
-      <div className="container">
+    <section id="process" className="section-spacing section-divider relative overflow-hidden bg-background">
+      <RuneField seed="process" />
+      <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">O Método Forge</h2>
           <p className="text-lg text-muted-foreground">Engenharia de alta precisão, interfaces intuitivas e cronogramas sem imprevistos</p>

@@ -1,26 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { useMemo } from "react";
+import RuneField from "@/components/RuneField";
 
 interface HeroSectionProps {
   heroImageUrl?: string;
 }
 
 export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
-  const floatingRunes = useMemo(() => {
-    const runes = ["ᚠ", "ᚢ", "ᚦ", "ᚨ", "ᚱ", "ᚲ", "ᚷ", "ᚹ", "ᚺ", "ᚾ", "ᛁ", "ᛃ", "ᛇ", "ᛈ", "ᛉ", "ᛋ", "ᛏ", "ᛒ", "ᛖ", "ᛗ", "ᛚ", "ᛜ", "ᛟ"];
-
-    return Array.from({ length: 34 }, (_, index) => ({
-      id: `rune-${index}`,
-      glyph: runes[Math.floor(Math.random() * runes.length)],
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      size: `${0.95 + Math.random() * 1.2}rem`,
-      opacity: 0.25 + Math.random() * 0.45,
-      duration: `${10 + Math.random() * 8}s`,
-      delay: `${Math.random() * 5}s`,
-    }));
-  }, []);
-
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
       {heroImageUrl && (
@@ -36,24 +21,7 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
 
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-      <div className="rune-field absolute inset-0 z-0" aria-hidden="true">
-        {floatingRunes.map((rune) => (
-          <span
-            key={rune.id}
-            className="floating-rune"
-            style={{
-              top: rune.top,
-              left: rune.left,
-              fontSize: rune.size,
-              opacity: rune.opacity,
-              animationDuration: rune.duration,
-              animationDelay: rune.delay,
-            }}
-          >
-            {rune.glyph}
-          </span>
-        ))}
-      </div>
+      <RuneField count={34} seed="hero" />
 
       <div className="container relative z-10 py-20">
         <div className="mx-auto max-w-4xl text-center fade-in-up">
