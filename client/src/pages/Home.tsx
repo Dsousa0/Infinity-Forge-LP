@@ -8,6 +8,7 @@ import HowToStartSection from "@/components/HowToStartSection";
 import AboutSection from "@/components/AboutSection";
 import CTAFinalSection from "@/components/CTAFinalSection";
 import Footer from "@/components/Footer";
+import NordicRunesOverlay from "@/components/NordicRunesOverlay";
 
 /**
  * InfinityForge Landing Page
@@ -21,22 +22,26 @@ import Footer from "@/components/Footer";
  */
 export default function Home() {
   // Asset URLs from webdev project CDN
-  const heroImageUrl = "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/hero-forge-abstract-iPEXvMxdGotN4bfWssvZBA.webp";
+  const heroImageUrl =
+    "https://d2xsxph8kpxj0f.cloudfront.net/310419663032701910/47FFEKKvjbQg6NeYkd29nW/hero-forge-abstract-iPEXvMxdGotN4bfWssvZBA.webp";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <main>
-        <HeroSection heroImageUrl={heroImageUrl} />
-        <ProblemSection />
-        <AgileForgSection />
-        <ServicesSection />
-        <DifferentialsSection />
-        <HowToStartSection />
-        <AboutSection />
-        <CTAFinalSection />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <NordicRunesOverlay />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <HeroSection heroImageUrl={heroImageUrl} />
+          <ProblemSection />
+          <AgileForgSection />
+          <ServicesSection />
+          <DifferentialsSection />
+          <HowToStartSection />
+          <AboutSection />
+          <CTAFinalSection />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -156,6 +156,32 @@
   }
 }
 
+
+@keyframes rune-drift {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(-8deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translate3d(calc(var(--rune-drift-x, 0vw) * 0.55), 50vh, 0) rotate(4deg);
+    opacity: 0.3;
+  }
+
+  85% {
+    opacity: 0.36;
+  }
+
+  100% {
+    transform: translate3d(var(--rune-drift-x, 0vw), 115vh, 0) rotate(12deg);
+    opacity: 0;
+  }
+}
+
 @layer components {
   .container {
     width: 100%;
@@ -206,6 +232,37 @@
 
   .ornament-line {
     @apply h-px w-24 bg-gradient-to-r from-transparent via-accent/70 to-transparent;
+  }
+
+
+  .nordic-runes-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    color: color-mix(in srgb, var(--foreground) 24%, var(--background));
+    opacity: 0.38;
+  }
+
+  .nordic-rune {
+    position: absolute;
+    top: -15%;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    line-height: 1;
+    text-shadow: 0 0 10px color-mix(in srgb, var(--foreground) 24%, transparent);
+    animation-name: rune-drift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nordic-rune {
+      animation: none;
+      opacity: 0.18;
+    }
   }
 
   .cta-button {
