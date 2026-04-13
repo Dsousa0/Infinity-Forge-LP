@@ -196,6 +196,19 @@
     @apply inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-mono text-primary;
   }
 
+  .rune-field {
+    pointer-events: none;
+    mask-image: radial-gradient(circle at center, black 62%, transparent 100%);
+  }
+
+  .floating-rune {
+    @apply absolute font-mono text-primary/75;
+    text-shadow: 0 0 12px rgb(15 76 92 / 0.3);
+    animation-name: rune-drift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
   .nordic-panel {
     @apply rounded-2xl border border-primary/20 bg-card/80 p-6 shadow-[0_14px_30px_-22px_rgba(19,39,48,0.75)] backdrop-blur-sm;
   }
@@ -210,5 +223,20 @@
 
   .cta-button {
     @apply inline-flex items-center justify-center gap-2 rounded-xl border border-accent/60 bg-accent px-6 py-3 font-mono font-semibold text-accent-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent/90;
+  }
+}
+
+@keyframes rune-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  40% {
+    transform: translate3d(8px, -14px, 0) rotate(-6deg);
+  }
+
+  70% {
+    transform: translate3d(-10px, 10px, 0) rotate(4deg);
   }
 }
