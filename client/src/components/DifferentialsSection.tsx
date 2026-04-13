@@ -1,3 +1,5 @@
+import RuneField from "@/components/RuneField";
+
 interface Differential {
   title: string;
   description: string;
@@ -32,8 +34,9 @@ export default function DifferentialsSection() {
   ];
 
   return (
-    <section id="differentials" className="section-spacing section-divider bg-background">
-      <div className="container mx-auto px-4">
+    <section id="differentials" className="section-spacing section-divider relative overflow-hidden bg-background">
+      <RuneField seed="differentials" />
+      <div className="container relative z-10 mx-auto px-4">
         {/* Heading */}
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">

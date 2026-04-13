@@ -1,3 +1,5 @@
+import RuneField from "@/components/RuneField";
+
 interface Service {
   icon: string;
   title: string;
@@ -28,8 +30,9 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section-spacing section-divider bg-background">
-      <div className="container">
+    <section id="services" className="section-spacing section-divider relative overflow-hidden bg-background">
+      <RuneField seed="services" />
+      <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">
           <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
             Soluções criadas para

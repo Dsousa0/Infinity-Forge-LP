@@ -1,3 +1,5 @@
+import RuneField from "@/components/RuneField";
+
 export default function ProblemSection() {
   const problems = [
     "Projetos que nunca terminam",
@@ -7,8 +9,9 @@ export default function ProblemSection() {
   ];
 
   return (
-    <section className="section-spacing section-divider bg-background">
-      <div className="container">
+    <section className="section-spacing section-divider relative overflow-hidden bg-background">
+      <RuneField seed="problem" />
+      <div className="container relative z-10">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-12 text-4xl font-bold text-foreground md:text-5xl">
             Seu software não pode esperar
