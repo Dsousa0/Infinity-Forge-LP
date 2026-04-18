@@ -31,7 +31,7 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
             <span className="rune-chip"><span aria-hidden="true">ᛟ</span> Entrega Contínua</span>
           </div>
 
-          <h1 className="hero-text mb-7 text-5xl font-bold text-foreground md:text-7xl">
+          <h1 className="hero-text mb-7 text-4xl font-bold text-foreground sm:text-5xl md:text-7xl">
             Software com DNA
             <br />
             <span className="text-primary">inovador</span> e o rigor
