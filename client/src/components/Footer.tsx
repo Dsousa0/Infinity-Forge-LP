@@ -10,20 +10,20 @@ export default function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/60 bg-primary text-primary-foreground">ᚠ</div>
+              <div className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/60 bg-primary text-primary-foreground" aria-hidden="true">ᚠ</div>
               <span className="font-mono font-bold">InfinityForge</span>
             </div>
             <p className="text-sm text-muted-foreground">Engenharia de software com estética nórdica e visão de produto.</p>
           </div>
 
-          <div>
+          <nav aria-label="Navegação do rodapé">
             <h4 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider text-primary">Navegação</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#process" className="transition-colors hover:text-primary">Processo</a></li>
               <li><a href="#services" className="transition-colors hover:text-primary">Serviços</a></li>
               <li><a href="#differentials" className="transition-colors hover:text-primary">Diferenciais</a></li>
             </ul>
-          </div>
+          </nav>
 
           <div>
             <h4 className="mb-4 font-mono text-sm font-bold uppercase tracking-wider text-primary">Contato</h4>

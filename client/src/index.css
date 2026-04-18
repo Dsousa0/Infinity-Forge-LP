@@ -255,3 +255,15 @@
     transform: translate3d(-10px, 10px, 0) rotate(4deg);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .floating-rune {
+    animation: none;
+  }
+}

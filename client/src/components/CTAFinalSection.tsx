@@ -18,11 +18,11 @@ export default function CTAFinalSection() {
           </p>
 
           <div className="mb-12 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="rounded-xl bg-primary px-8 font-mono text-base text-primary-foreground hover:bg-primary/90">
-              Iniciar Projeto
+            <Button asChild size="lg" className="rounded-xl bg-primary px-8 font-mono text-base text-primary-foreground hover:bg-primary/90">
+              <a href="mailto:contato@infinityforge.com">Iniciar Projeto</a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-xl border-primary/50 px-8 font-mono text-base text-primary hover:bg-primary/10">
-              Agendar Reunião
+            <Button asChild size="lg" variant="outline" className="rounded-xl border-primary/50 px-8 font-mono text-base text-primary hover:bg-primary/10">
+              <a href="mailto:contato@infinityforge.com">Agendar Reunião</a>
             </Button>
           </div>
 

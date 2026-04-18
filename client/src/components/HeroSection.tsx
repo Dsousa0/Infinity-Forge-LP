@@ -26,9 +26,9 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
       <div className="container relative z-10 py-20">
         <div className="mx-auto max-w-4xl text-center fade-in-up">
           <div className="mb-7 flex flex-wrap justify-center gap-3">
-            <span className="rune-chip">ᚱ Engenharia de Sofware</span>
-            <span className="rune-chip">ᚠ Produto Escalável</span>
-            <span className="rune-chip">ᛟ Entrega Contínua</span>
+            <span className="rune-chip"><span aria-hidden="true">ᚱ</span> Engenharia de Software</span>
+            <span className="rune-chip"><span aria-hidden="true">ᚠ</span> Produto Escalável</span>
+            <span className="rune-chip"><span aria-hidden="true">ᛟ</span> Entrega Contínua</span>
           </div>
 
           <h1 className="hero-text mb-7 text-5xl font-bold text-foreground md:text-7xl">
@@ -44,11 +44,11 @@ export default function HeroSection({ heroImageUrl }: HeroSectionProps) {
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="rounded-xl bg-primary px-8 font-mono text-base text-primary-foreground hover:bg-primary/90">
-              Iniciar Meu Projeto
+            <Button asChild size="lg" className="rounded-xl bg-primary px-8 font-mono text-base text-primary-foreground hover:bg-primary/90">
+              <a href="#contact">Iniciar Meu Projeto</a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-xl border-primary/60 px-8 font-mono text-base text-primary hover:bg-primary/10">
-              Conhecer o Método
+            <Button asChild size="lg" variant="outline" className="rounded-xl border-primary/60 px-8 font-mono text-base text-primary hover:bg-primary/10">
+              <a href="#process">Conhecer o Método</a>
             </Button>
           </div>
           <div className="mt-10 flex justify-center">
