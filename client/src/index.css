@@ -210,7 +210,7 @@
   }
 
   .nordic-panel {
-    @apply rounded-2xl border border-primary/20 bg-card/80 p-6 shadow-[0_14px_30px_-22px_rgba(19,39,48,0.75)] backdrop-blur-sm;
+    @apply rounded-2xl border border-primary/20 bg-card/80 p-4 shadow-[0_14px_30px_-22px_rgba(19,39,48,0.75)] backdrop-blur-sm md:p-6;
   }
 
   .nordic-panel-hover {
