@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-primary/15 bg-background text-foreground">
       <RuneField seed="footer" count={18} />
       <div className="container relative z-10 py-14">
-        <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-4">
+        <div className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-10">
           <div>
             <div className="mb-4 flex items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/60 bg-primary text-primary-foreground" aria-hidden="true">ᚠ</div>
