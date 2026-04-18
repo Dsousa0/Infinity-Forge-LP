@@ -9,9 +9,8 @@ export default function Footer() {
       <div className="container relative z-10 py-14">
         <div className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-10">
           <div>
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md border border-accent/60 bg-primary text-primary-foreground" aria-hidden="true">ᚠ</div>
-              <span className="font-mono font-bold">InfinityForge</span>
+            <div className="mb-4 flex items-center">
+              <img src="/logo.png" alt="Infinity Forge" className="h-9 w-auto rounded-md" />
             </div>
             <p className="text-sm text-muted-foreground">Engenharia de software com estética nórdica e visão de produto.</p>
           </div>

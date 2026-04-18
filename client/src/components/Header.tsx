@@ -14,14 +14,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/15 bg-background/85 backdrop-blur-lg">
       <div className="container flex items-center justify-between py-4">
-        <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-accent/60 bg-primary text-primary-foreground" aria-hidden="true">
-            <span className="font-mono text-lg font-bold">ᚠ</span>
-          </div>
-          <div className="leading-none">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground">Infinity</p>
-            <p className="font-mono text-lg font-bold text-foreground">Forge</p>
-          </div>
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Infinity Forge" className="h-11 w-auto rounded-lg" />
         </div>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
