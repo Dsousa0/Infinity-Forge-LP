@@ -32,7 +32,7 @@ const RUNES = [
   "ᚣ",
 ];
 
-const RUNE_COUNT = 90;
+const RUNE_COUNT = 30;
 
 export default function NordicRunesOverlay() {
   const runeInstances = useMemo(

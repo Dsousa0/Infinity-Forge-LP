@@ -157,7 +157,7 @@
 }
 
 
-@keyframes rune-drift {
+@keyframes nordic-rune-drift {
   0% {
     transform: translate3d(0, -10vh, 0) rotate(-8deg);
     opacity: 0;
@@ -252,7 +252,7 @@
     font-weight: 600;
     line-height: 1;
     text-shadow: 0 0 10px color-mix(in srgb, var(--foreground) 24%, transparent);
-    animation-name: rune-drift;
+    animation-name: nordic-rune-drift;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     opacity: 0;
