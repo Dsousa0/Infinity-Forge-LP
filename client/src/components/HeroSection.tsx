@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import RuneField from "./RuneField";
+import RuneField from "@/components/RuneField";
 
 interface HeroSectionProps {
   heroImageUrl?: string;
