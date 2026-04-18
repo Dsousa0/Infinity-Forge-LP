@@ -13,7 +13,7 @@ export default function ProblemSection() {
       <RuneField seed="problem" />
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-12 text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-12 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Seu software não pode esperar
             <br />
             <span className="text-primary">meses para existir</span>

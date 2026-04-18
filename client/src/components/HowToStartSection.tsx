@@ -31,7 +31,7 @@ export default function HowToStartSection() {
       <RuneField seed="how-to-start" />
       <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">
-          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Começar é
             <br />
             <span className="text-primary">simples</span>
@@ -46,7 +46,7 @@ export default function HowToStartSection() {
                 {step.number}
               </div>
               <div>
-                <h3 className="mb-2 text-2xl font-bold text-foreground">{step.title}</h3>
+                <h3 className="mb-2 text-xl font-bold text-foreground md:text-2xl">{step.title}</h3>
                 <p className="text-lg text-muted-foreground">{step.description}</p>
               </div>
             </div>

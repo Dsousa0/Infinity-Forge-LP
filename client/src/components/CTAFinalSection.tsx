@@ -7,7 +7,7 @@ export default function CTAFinalSection() {
       <RuneField seed="contact" />
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-8 text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className="mb-8 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Vamos construir seu
             <br />
             <span className="text-primary">próximo sistema</span>?

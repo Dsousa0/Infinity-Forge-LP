@@ -39,7 +39,7 @@ export default function DifferentialsSection() {
       <div className="container relative z-10 mx-auto px-4">
         {/* Heading */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4 text-foreground">
+          <h2 className="text-3xl font-mono font-bold mb-4 text-foreground md:text-4xl lg:text-5xl">
             Engenharia de Software,
             <br />
             <span className="text-accent">Não apenas desenvolvimento</span>
