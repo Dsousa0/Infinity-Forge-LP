@@ -4,24 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Acervo de referência (agnostic-core)
 
-**Antes de planejar ou implementar qualquer coisa, consulte o acervo em `shared/agnostic-core/`.**
+**Antes de planejar ou implementar qualquer coisa, consulte o acervo em `.agnostic-core/`.**
 
 Leia o índice de skills disponíveis:
-- `shared/agnostic-core/README.md` — visão geral de todas as categorias
-- `shared/agnostic-core/CLAUDE.md` — regras de comportamento do Claude neste workspace
+- `.agnostic-core/README.md` — visão geral de todas as categorias
+- `.agnostic-core/CLAUDE.md` — regras de comportamento do Claude neste workspace
 
 Skills relevantes para este projeto:
 
 | Necessidade | Arquivo |
 |---|---|
-| Segurança de API | `shared/agnostic-core/skills/security/` |
-| Governança CSS / Tailwind | `shared/agnostic-core/skills/frontend/` |
-| UX e hierarquia visual | `shared/agnostic-core/skills/ux-ui/` |
-| Auditoria de performance | `shared/agnostic-core/skills/performance/` |
-| Revisão de código | `shared/agnostic-core/skills/audit/` |
-| Workflows de processo | `shared/agnostic-core/commands/workflows/` |
+| Segurança de API | `.agnostic-core/skills/security/` |
+| Governança CSS / Tailwind | `.agnostic-core/skills/frontend/` |
+| UX e hierarquia visual | `.agnostic-core/skills/ux-ui/` |
+| Auditoria de performance | `.agnostic-core/skills/performance/` |
+| Revisão de código | `.agnostic-core/skills/audit/` |
+| Workflows de processo | `.agnostic-core/commands/workflows/` |
 
-Agentes especializados disponíveis: `shared/agnostic-core/agents/`
+Agentes especializados disponíveis: `.agnostic-core/agents/`
 
 ---
 
@@ -46,7 +46,7 @@ pnpm format       # Prettier em todo o projeto
 ```
 client/      → React 19 SPA (raiz do Vite)
 server/      → Express (index.ts), buildado via esbuild
-shared/      → Código compartilhado + agnostic-core
+shared/      → Código compartilhado
 ```
 
 ### Client (`client/src/`)
