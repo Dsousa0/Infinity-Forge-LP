@@ -31,7 +31,7 @@ export default function AgileForgSection() {
   ];
 
   return (
-    <section id="process" className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section id="process" className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="process" />
       <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">

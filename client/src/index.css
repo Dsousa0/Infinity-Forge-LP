@@ -180,10 +180,6 @@
     }
   }
 
-  .section-divider {
-    @apply border-b border-primary/15;
-  }
-
   .section-spacing {
     @apply py-20 md:py-28;
   }

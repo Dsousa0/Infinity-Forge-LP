@@ -21,7 +21,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="about" />
       <div className="container relative z-10 mx-auto px-4">
         {/* Heading */}

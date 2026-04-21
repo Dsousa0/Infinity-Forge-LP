@@ -30,7 +30,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section id="services" className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="services" />
       <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">

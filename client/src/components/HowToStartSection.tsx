@@ -27,7 +27,7 @@ export default function HowToStartSection() {
   ];
 
   return (
-    <section className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="how-to-start" />
       <div className="container relative z-10">
         <div className="mx-auto mb-16 max-w-4xl">

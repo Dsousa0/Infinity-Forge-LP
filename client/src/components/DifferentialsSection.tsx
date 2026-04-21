@@ -34,7 +34,7 @@ export default function DifferentialsSection() {
   ];
 
   return (
-    <section id="differentials" className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section id="differentials" className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="differentials" />
       <div className="container relative z-10 mx-auto px-4">
         {/* Heading */}

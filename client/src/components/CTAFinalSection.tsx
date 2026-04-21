@@ -3,7 +3,7 @@ import RuneField from "@/components/RuneField";
 
 export default function CTAFinalSection() {
   return (
-    <section id="contact" className="section-spacing section-divider relative overflow-hidden bg-background">
+    <section id="contact" className="section-spacing relative overflow-hidden bg-background">
       <RuneField seed="contact" />
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center">
