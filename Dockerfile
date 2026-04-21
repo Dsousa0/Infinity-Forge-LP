@@ -14,6 +14,7 @@ RUN pnpm build
 FROM node:20-alpine AS production
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
+COPY package.json ./
 RUN npm install express@^4.21.2 --prefix /app
 ENV NODE_ENV=production
 ENV PORT=3000
