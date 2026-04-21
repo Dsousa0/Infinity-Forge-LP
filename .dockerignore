@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.gitignore
+.env*
+.claude
+.agnostic-core
+.manus-logs
+imagens
+docs
+ideas.md
