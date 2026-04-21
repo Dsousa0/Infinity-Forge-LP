@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="mb-4 flex items-center">
               <img src="/logo.png" alt="Infinity Forge" className="h-9 w-auto rounded-md" />
             </div>
-            <p className="text-sm text-muted-foreground">Engenharia de software com estética nórdica e visão de produto.</p>
+            <p className="text-sm text-muted-foreground">Onde a tradição da forja encontra a vanguarda da tecnologia.</p>
           </div>
 
           <nav aria-label="Navegação do rodapé">
