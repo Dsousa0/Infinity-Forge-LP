@@ -7,7 +7,6 @@ export default function TopBar() {
         <img src="/logo.png" alt="" />
         <div className="v2-brand-text">
           <div className="v2-brand-name">Infinity Forge</div>
-          <div className="v2-brand-sub">Jornada · v2</div>
         </div>
       </div>
     </div>

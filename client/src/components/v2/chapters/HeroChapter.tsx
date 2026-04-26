@@ -46,7 +46,6 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
 
   return (
     <div className="v2-chapter" ref={wrapRef}>
-      <div className="v2-grid-bg" />
       <div className="v2-hero">
         <div className="v2-hero-left" ref={leftRef}>
           <div className="v2-hero-eyebrow">{t.hero.eyebrow}</div>

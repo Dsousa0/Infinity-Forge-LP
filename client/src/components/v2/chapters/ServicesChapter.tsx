@@ -12,7 +12,7 @@ interface ServicesChapterProps {
 }
 
 export default function ServicesChapter({ t }: ServicesChapterProps) {
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(-1);
 
   const onMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
