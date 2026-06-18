@@ -2,9 +2,7 @@
 import { useState, useEffect } from 'react';
 import '@/styles/v2.css';
 import '@/styles/cockpit.css';
-import TopBar from '@/components/v2/TopBar';
-import NavRail from '@/components/v2/NavRail';
-import BottomBar from '@/components/v2/BottomBar';
+import CockpitFrame from '@/components/v2/cockpit/CockpitFrame';
 import HeroChapter from '@/components/v2/chapters/HeroChapter';
 import ServicesChapter from '@/components/v2/chapters/ServicesChapter';
 import ProcessChapter from '@/components/v2/chapters/ProcessChapter';
@@ -70,18 +68,17 @@ export default function HomeV2() {
   return (
     <>
       <div className="v2-progress" style={{ width: scrollProgress + '%' }} />
-      <TopBar />
-      <NavRail chapters={[...CHAPTERS]} activeIdx={activeChapter} onJump={jump} />
-      <main className="v2-scroll">
-        <section id="v2-hero"     className="v2-section"><HeroChapter     t={t} onJump={jump} /></section>
-        <section id="v2-services" className="v2-section"><ServicesChapter t={t} /></section>
-        <section id="v2-process"  className="v2-section"><ProcessChapter  t={t} /></section>
-        <section id="v2-stack"    className="v2-section"><StackChapter    t={t} /></section>
-        <section id="v2-work"     className="v2-section"><WorkChapter     t={t} /></section>
-        <section id="v2-numbers"  className="v2-section"><StatsChapter    t={t} /></section>
-        <section id="v2-contact"  className="v2-section v2-section-end"><ContactChapter t={t} /></section>
-      </main>
-      <BottomBar chapters={[...CHAPTERS]} activeIdx={activeChapter} />
+      <CockpitFrame chapters={[...CHAPTERS]} activeIdx={activeChapter} scrollProgress={scrollProgress} onJump={jump}>
+        <main className="v2-scroll">
+          <section id="v2-hero"     className="v2-section"><HeroChapter     t={t} onJump={jump} /></section>
+          <section id="v2-services" className="v2-section"><ServicesChapter t={t} /></section>
+          <section id="v2-process"  className="v2-section"><ProcessChapter  t={t} /></section>
+          <section id="v2-stack"    className="v2-section"><StackChapter    t={t} /></section>
+          <section id="v2-work"     className="v2-section"><WorkChapter     t={t} /></section>
+          <section id="v2-numbers"  className="v2-section"><StatsChapter    t={t} /></section>
+          <section id="v2-contact"  className="v2-section v2-section-end"><ContactChapter t={t} /></section>
+        </main>
+      </CockpitFrame>
     </>
   );
 }
