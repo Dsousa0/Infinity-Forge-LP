@@ -519,8 +519,20 @@ body.v2 {
   .v2-stat-cell:nth-child(2) { border-left: 0; }
   .v2-hero-right { height: 360px; }
   .v2-stack-orbit { height: 360px; overflow: hidden; }
+  /* No mobile, título/estágios vêm antes da ilustração da bigorna (que no DOM
+     fica primeiro por causa do layout 2 colunas do desktop). */
+  .v2-process-stages { order: 1; }
+  .v2-process-anvil { order: 2; height: 360px; }
   .v2-nav { display: none; }
-  .v2-section { padding: 80px 24px; align-items: flex-start; padding-top: 100px; }
+  /* Sem min-height de tela cheia no mobile: seções curtas deixam de esticar
+     (evita espaço morto em "Números"/"Stack"). Ritmo vertical mais enxuto;
+     padding-top limpa a TopBar fixa (72px) ao saltar para a seção. */
+  .v2-section {
+    min-height: auto;
+    padding: 88px 24px 56px;
+    align-items: flex-start;
+  }
+  .v2-section-end { padding-bottom: 96px; } /* limpa a BottomBar fixa (75px) */
   .v2-orbit-ring.o3 { display: none; }
   .v2-rune-card.expanded { grid-column: span 1; grid-row: span 1; aspect-ratio: 0.75; }
 }

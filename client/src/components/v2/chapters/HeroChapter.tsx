@@ -1,9 +1,10 @@
 // client/src/components/v2/chapters/HeroChapter.tsx
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import type { I18nContent } from '@/lib/i18n-v2';
 
 const RUNES = ['ᚠ','ᚢ','ᚦ','ᚨ','ᚱ','ᚲ','ᚷ','ᚹ','ᚺ','ᚾ','ᛁ','ᛃ'];
-const RADIUS = 240;
+const MAX_RADIUS = 240;
+const RUNE_HALF = 22; // metade do box da runa (44px), para não vazar do container
 
 interface HeroChapterProps {
   t: I18nContent;
@@ -15,6 +16,22 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
   const sigilRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const [hotRune, setHotRune] = useState(-1);
+  const [radius, setRadius] = useState(MAX_RADIUS);
+
+  // Raio da órbita responsivo: as runas nunca podem ultrapassar o container
+  // (no mobile o sigil encolhe; com raio fixo elas vazavam sobre os CTAs).
+  useLayoutEffect(() => {
+    const el = sigilRef.current;
+    if (!el) return;
+    const measure = () => {
+      const fit = Math.min(el.clientWidth, el.clientHeight) / 2 - RUNE_HALF - 6;
+      setRadius(Math.max(96, Math.min(MAX_RADIUS, fit)));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
@@ -76,8 +93,8 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
             <div className="v2-sigil-ring r3" />
             {RUNES.map((r, i) => {
               const angle = (i / RUNES.length) * Math.PI * 2 - Math.PI / 2;
-              const x = Math.cos(angle) * RADIUS;
-              const y = Math.sin(angle) * RADIUS;
+              const x = Math.cos(angle) * radius;
+              const y = Math.sin(angle) * radius;
               return (
                 <div
                   key={i}

@@ -28,14 +28,15 @@ Agentes especializados disponíveis: `.agnostic-core/agents/`
 ## Comandos
 
 ```bash
-pnpm dev          # Dev server em http://localhost:3000
-pnpm build        # Build client (Vite) + server (esbuild) → dist/
-pnpm start        # Serve produção (NODE_ENV=production)
-pnpm check        # Type-check TypeScript (sem emitir)
-pnpm format       # Prettier em todo o projeto
+npm run dev       # Dev server em http://localhost:3003 (porta fixa, strictPort)
+npm run build     # Build client (Vite) + server (esbuild) → dist/
+npm start         # Serve produção (NODE_ENV=production)
+npm run check     # Type-check TypeScript (sem emitir)
+npm run format    # Prettier em todo o projeto
 ```
 
-> O projeto usa `pnpm`. Não usar `npm` ou `yarn`.
+> O projeto usa **npm** (`package-lock.json` é o único lockfile). Resíduos de pnpm
+> (lockfile, `packageManager`, patches do Manus) foram removidos na consolidação.
 
 ---
 
@@ -51,13 +52,19 @@ shared/      → Código compartilhado
 
 ### Client (`client/src/`)
 
-- **Roteamento:** `wouter` — rotas definidas em `App.tsx`
+- **Roteamento:** `wouter` — rotas definidas em `App.tsx` (rota `/` → `HomeV2`)
 - **Tema:** `ThemeProvider` em `contexts/ThemeContext.tsx`; tema padrão `dark`; para tornar alternável, passar prop `switchable`
-- **Página única:** `pages/Home.tsx` compõe todas as seções da LP em ordem linear
-- **Seções:** cada bloco da landing é um componente isolado em `components/` (Header, HeroSection, ProblemSection, AgileForgSection, ServicesSection, DifferentialsSection, HowToStartSection, AboutSection, CTAFinalSection, Footer)
-- **UI primitives:** shadcn/ui via `components/ui/` (Radix UI por baixo)
+- **Página única (V2):** `pages/HomeV2.tsx` orquestra a landing como uma sequência de "chapters" com scroll-spy, navegação lateral e barra de progresso
+- **Chapters:** cada bloco é um componente em `components/v2/chapters/` — `HeroChapter`, `ServicesChapter`, `ProcessChapter`, `StackChapter`, `WorkChapter`, `StatsChapter`, `ContactChapter`
+- **Chrome da V2:** `components/v2/` — `TopBar`, `NavRail` (navegação por capítulo), `BottomBar`
+- **Conteúdo/i18n:** todo o texto vem de `lib/i18n-v2.ts` (objeto `I18N_PT`), passado como prop `t` para cada chapter
+- **Estilos da V2:** `styles/v2.css` (importado por `HomeV2`), além do `index.css` global
+- **UI primitives:** shadcn/ui via `components/ui/` (Radix UI por baixo) — mantidos apenas os usados: `button`, `card`, `sonner`, `tooltip`. Para adicionar mais, use o CLI do shadcn (`npx shadcn@latest add <componente>`)
 - **Animações:** framer-motion
 - **Estilos:** Tailwind CSS v4 via plugin Vite (`@tailwindcss/vite`) — sem `tailwind.config.js`
+
+> **Histórico:** existia uma V1 (`pages/Home.tsx` + componentes `*Section` + `Header`/`Footer`/`RuneField`)
+> que foi removida na consolidação para versão única. A V2 é a única landing ativa.
 
 ### Path aliases
 
@@ -69,12 +76,11 @@ shared/      → Código compartilhado
 ### Vite config
 
 - Raiz do Vite é `client/` (não a raiz do repo)
+- Dev server em porta fixa `3003` (`strictPort: true`)
 - Build emite em `dist/public/`
-- Plugin `vitePluginManusDebugCollector` captura logs do browser em `.manus-logs/` durante dev — não remover
 
 ### Design
 
-- Tipografia monospace (IBM Plex Mono) para títulos — reforça identidade de engenharia
-- Paleta: preto profundo, azul elétrico, laranja forge
-- Espaço negativo abundante; animações sutis; layout assimétrico
-- Componente `RuneField` renderiza runas decorativas deterministicamente (sem `Math.random()`)
+- **Tipografia:** `Cinzel` (serifada) para títulos/display, `IBM Plex Mono` para labels e textos pequenos (caixa alta, letter-spacing alto), `Noto Sans Runic` para as runas decorativas
+- **Paleta:** preto profundo (`--obsidian`/`--stone`), dourado/laranja forge (`--ember`) — definida em `styles/v2.css` via CSS custom properties
+- Espaço negativo abundante; animações sutis; estética de "forja"/engenharia
