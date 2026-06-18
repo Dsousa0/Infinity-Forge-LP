@@ -46,3 +46,15 @@ body.v2 {
 @media (prefers-reduced-motion: reduce) {
   .ck-scanline { animation: none; display: none; }
 }
+
+.ck-topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 45;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 54px; font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: #5c6b72;
+  background: linear-gradient(to bottom, rgba(8,11,15,.9), transparent);
+}
+.ck-topbar .brand { display: flex; align-items: center; gap: 11px; color: var(--stone-3); font-weight: 700; letter-spacing: .24em; }
+.ck-topbar .brand img { width: 28px; height: 28px; object-fit: contain; }
+.ck-tele { display: flex; gap: 20px; font-family: var(--mono); }
+.ck-tele b { color: var(--ember); font-weight: 400; }
+@media (max-width: 900px) { .ck-topbar { padding: 14px 24px; } .ck-tele { display: none; } }
