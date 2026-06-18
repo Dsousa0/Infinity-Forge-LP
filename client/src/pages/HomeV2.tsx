@@ -1,6 +1,7 @@
 // client/src/pages/HomeV2.tsx
 import { useState, useEffect } from 'react';
 import '@/styles/v2.css';
+import '@/styles/cockpit.css';
 import TopBar from '@/components/v2/TopBar';
 import NavRail from '@/components/v2/NavRail';
 import BottomBar from '@/components/v2/BottomBar';

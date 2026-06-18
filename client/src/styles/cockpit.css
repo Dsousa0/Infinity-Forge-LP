@@ -1,0 +1,48 @@
+/* client/src/styles/cockpit.css — casca do cockpit HUD + primitivos */
+:root { --line: rgba(127,182,196,.20); }
+
+/* fundo limpo do cockpit (sem grid) */
+body.v2 {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(210,170,104,.07), transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(127,182,196,.06), transparent 55%),
+    var(--ink);
+}
+
+/* ── moldura + brackets ── */
+.ck-frame { position: fixed; inset: 0; pointer-events: none; z-index: 40; }
+.ck-bracket { position: absolute; width: 26px; height: 26px; border: 1.5px solid var(--frost); opacity: .55; }
+.ck-bracket.tl { top: 16px; left: 16px; border-right: 0; border-bottom: 0; }
+.ck-bracket.tr { top: 16px; right: 16px; border-left: 0; border-bottom: 0; }
+.ck-bracket.bl { bottom: 16px; left: 16px; border-right: 0; border-top: 0; }
+.ck-bracket.br { bottom: 16px; right: 16px; border-left: 0; border-top: 0; }
+
+/* ── scanline global ── */
+.ck-scanline {
+  position: fixed; left: 0; right: 0; height: 2px; z-index: 41; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(127,182,196,.5), transparent);
+  box-shadow: 0 0 14px rgba(127,182,196,.4); opacity: .4;
+  animation: ck-scan 7s linear infinite;
+}
+@keyframes ck-scan { 0% { top: -2%; } 100% { top: 102%; } }
+
+/* ── tag de cabeçalho de módulo (MÓDULO NN · Nome) ── */
+.mod-tag {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--frost); display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+}
+.mod-tag::before { content: ""; width: 30px; height: 1px; background: linear-gradient(90deg, transparent, var(--ember)); }
+
+/* ── painel HUD reutilizável ── */
+.hud-panel {
+  border: 1px solid var(--line); border-radius: 10px; position: relative;
+  background: linear-gradient(180deg, rgba(127,182,196,.04), transparent);
+}
+.hud-panel.accent::after {
+  content: ""; position: absolute; top: 0; left: 0; height: 2px; width: 100%;
+  background: linear-gradient(90deg, var(--ember), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ck-scanline { animation: none; display: none; }
+}
