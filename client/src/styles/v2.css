@@ -313,7 +313,7 @@ body.v2 {
   position: relative; aspect-ratio: 0.75;
   background: linear-gradient(180deg, rgba(127,182,196,0.06), rgba(127,182,196,0.02));
   border: 1px solid rgba(127,182,196,0.15);
-  border-radius: var(--r-md); padding: 20px;
+  border-radius: var(--r-md); padding: 22px;
   cursor: pointer; transition: all .35s var(--ease);
   display: flex; flex-direction: column; justify-content: space-between;
   overflow: hidden; transform-style: preserve-3d;
@@ -350,6 +350,7 @@ body.v2 {
   font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em;
   color: rgba(127,182,196,0.4);
 }
+.v2-card-num { position: absolute; top: 14px; right: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: .2em; color: var(--ember); }
 
 /* ── CHAPTER 2: PROCESS ── */
 .v2-process {

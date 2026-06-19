@@ -24,6 +24,7 @@ export default function ServicesChapter({ t }: ServicesChapterProps) {
     <div className="v2-chapter">
       <div className="v2-services">
         <div className="v2-services-intro">
+          <div className="mod-tag">Módulo 02 · Serviços</div>
           <div className="sec-eyebrow">{t.services.eyebrow}</div>
           <h2 className="sec-title" style={{ fontSize: 'clamp(34px, 4vw, 52px)' }}>
             {t.services.title}
@@ -37,10 +38,11 @@ export default function ServicesChapter({ t }: ServicesChapterProps) {
           {t.services.list.map((s, i) => (
             <button
               key={i}
-              className={`v2-rune-card${expanded === i ? ' expanded' : ''}`}
+              className={`v2-rune-card hud-panel accent${expanded === i ? ' expanded' : ''}`}
               onMouseMove={onMove}
               onClick={() => setExpanded(i === expanded ? -1 : i)}
             >
+              <span className="v2-card-num">{String(i + 1).padStart(2, '0')}</span>
               <div>
                 <div className="v2-rune-corner">0{i + 1}</div>
                 <div className="v2-rune-glyph">{RUNE_MAP[s.rune] ?? 'ᚠ'}</div>
