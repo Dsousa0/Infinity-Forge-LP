@@ -15,6 +15,7 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const sigilRef = useRef<HTMLDivElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
+  const sparksRef = useRef<HTMLDivElement>(null);
   const [hotRune, setHotRune] = useState(-1);
   const [radius, setRadius] = useState(MAX_RADIUS);
 
@@ -61,10 +62,31 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const host = sparksRef.current;
+    if (!host) return;
+    const id = setInterval(() => {
+      for (let i = 0; i < 4; i++) {
+        const s = document.createElement('div');
+        s.className = 'v2-spark';
+        const dx = (Math.random() - 0.5) * 180, dy = -40 - Math.random() * 110;
+        host.appendChild(s);
+        s.animate(
+          [{ transform: 'translate(-50%,-50%)', opacity: 1 },
+           { transform: `translate(calc(-50% + ${dx}px),calc(-50% + ${dy}px))`, opacity: 0 }],
+          { duration: 1100 + Math.random() * 600, easing: 'cubic-bezier(.2,.6,.2,1)' }
+        ).onfinish = () => s.remove();
+      }
+    }, 900);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="v2-chapter" ref={wrapRef}>
       <div className="v2-hero">
         <div className="v2-hero-left" ref={leftRef}>
+          <div className="mod-tag">Módulo 01 · Origem</div>
           <div className="v2-hero-eyebrow">{t.hero.eyebrow}</div>
           <h1 className="v2-hero-title">
             {t.hero.title1}
@@ -88,6 +110,7 @@ export default function HeroChapter({ t, onJump }: HeroChapterProps) {
         <div className="v2-hero-right">
           <div className="v2-sigil" ref={sigilRef}>
             <div className="v2-sigil-pulse" />
+            <div className="v2-sigil-sparks" ref={sparksRef} />
             <div className="v2-sigil-ring r1" />
             <div className="v2-sigil-ring r2" />
             <div className="v2-sigil-ring r3" />
