@@ -70,6 +70,7 @@ export default function ProcessChapter({ t }: ProcessChapterProps) {
         </div>
 
         <div className="v2-process-stages">
+          <div className="mod-tag">Módulo 03 · Processo</div>
           <div className="sec-eyebrow">{t.process.eyebrow}</div>
           <h2 className="sec-title" style={{ fontSize: 'clamp(32px, 3.6vw, 48px)' }}>
             {t.process.title}

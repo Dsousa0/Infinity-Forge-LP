@@ -393,24 +393,24 @@ body.v2 {
   0% { opacity: 1; transform: translate(0,0) scale(1); }
   100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.3); }
 }
-.v2-stages-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.v2-stages-list { position: relative; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.v2-stages-list::before { content: ""; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(var(--ember), transparent); opacity: .4; }
 .v2-stage {
-  position: relative; padding: 18px 24px 18px 64px;
+  position: relative; padding: 18px 24px 18px 34px;
   background: transparent; border: 1px solid transparent;
   border-radius: var(--r-md); cursor: pointer;
   text-align: left; color: inherit; font: inherit;
   transition: all .3s var(--ease);
 }
 .v2-stage::before {
-  content: ''; position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
-  width: 14px; height: 14px; border-radius: 50%;
-  border: 1px solid rgba(127,182,196,0.4); transition: all .3s;
+  content: ""; position: absolute; left: 6px; top: 12px;
+  width: 11px; height: 11px; border-radius: 50%;
+  border: 1px solid var(--frost); background: var(--ink); transition: .3s;
 }
 .v2-stage:hover { background: rgba(127,182,196,0.04); border-color: rgba(127,182,196,0.15); }
 .v2-stage.active { background: rgba(201,138,75,0.06); border-color: rgba(201,138,75,0.35); }
 .v2-stage.active::before {
-  background: var(--ember); border-color: var(--ember);
-  box-shadow: 0 0 0 5px rgba(201,138,75,0.15), 0 0 16px var(--ember);
+  border-color: var(--ember); box-shadow: 0 0 10px var(--ember); background: var(--ember);
 }
 .v2-stage-num { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; color: var(--ember); text-transform: uppercase; margin-bottom: 4px; }
 .v2-stage-title { font-family: var(--display); font-size: 22px; font-weight: 600; color: var(--stone-3); letter-spacing: 0.01em; margin: 0 0 4px; }
