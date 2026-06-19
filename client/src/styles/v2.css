@@ -473,6 +473,7 @@ body.v2 {
 .v2-case-desc { font-size: 14px; line-height: 1.55; color: rgba(214,225,232,0.7); margin: 0; }
 .v2-case-stats { display: flex; gap: 24px; padding-top: 14px; border-top: 1px solid rgba(127,182,196,0.1); }
 .v2-case-stat-num { font-family: var(--display); font-size: 16px; font-weight: 600; color: var(--ember); line-height: 1.3; }
+.v2-case-meta { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--frost); display: block; margin-bottom: 10px; }
 
 /* ── CHAPTER 5: STATS ── */
 .v2-stats { width: 100%; max-width: 1400px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }

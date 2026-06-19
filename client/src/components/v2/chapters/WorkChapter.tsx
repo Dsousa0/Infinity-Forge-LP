@@ -9,6 +9,7 @@ export default function WorkChapter({ t }: WorkChapterProps) {
   return (
     <div className="v2-chapter">
       <div className="v2-work">
+        <div className="mod-tag">Módulo 05 · Cases</div>
         <div style={{ maxWidth: 680, marginBottom: 8 }}>
           <div className="sec-eyebrow">{t.work.eyebrow}</div>
           <h2 className="sec-title" style={{ fontSize: 'clamp(32px, 3.6vw, 48px)' }}>
@@ -18,7 +19,8 @@ export default function WorkChapter({ t }: WorkChapterProps) {
         </div>
         <div className="v2-work-grid">
           {t.work.items.map((c, i) => (
-            <div key={i} className="v2-case">
+            <div key={i} className="v2-case hud-panel">
+              <span className="v2-case-meta">REGISTRO {String(i + 1).padStart(2, '0')}</span>
               <div className="v2-case-tag">{c.tag}</div>
               <h3 className="v2-case-title">{c.title}</h3>
               <p className="v2-case-desc">{c.desc}</p>
