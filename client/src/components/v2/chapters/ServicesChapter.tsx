@@ -44,7 +44,6 @@ export default function ServicesChapter({ t }: ServicesChapterProps) {
             >
               <span className="v2-card-num">{String(i + 1).padStart(2, '0')}</span>
               <div>
-                <div className="v2-rune-corner">0{i + 1}</div>
                 <div className="v2-rune-glyph">{RUNE_MAP[s.rune] ?? 'ᚠ'}</div>
               </div>
               <div>
