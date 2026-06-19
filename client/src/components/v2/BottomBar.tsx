@@ -1,34 +1,16 @@
-// client/src/components/v2/BottomBar.tsx
-
-interface Chapter {
-  id: string;
-  label: string;
-}
-
-interface BottomBarProps {
-  chapters: Chapter[];
-  activeIdx: number;
-}
+interface Chapter { id: string; label: string; }
+interface BottomBarProps { chapters: Chapter[]; activeIdx: number; }
 
 export default function BottomBar({ chapters, activeIdx }: BottomBarProps) {
-  const total = chapters.length;
-  const current = chapters[activeIdx];
-
+  const total = String(chapters.length).padStart(2, '0');
+  const idx = String(activeIdx + 1).padStart(2, '0');
   return (
-    <div className="v2-bottombar">
-      <div className="v2-chapter-info">
-        <div className="v2-chapter-eyebrow">Capítulo</div>
-        <div className="v2-chapter-counter">
-          {String(activeIdx + 1).padStart(2, '0')}
-          <span>/</span>
-          {String(total).padStart(2, '0')}
-          <span>·</span>
-          {current?.label}
-        </div>
+    <footer className="ck-bottombar">
+      <div className="idx">MÓDULO <b>{idx}</b> / {total}</div>
+      <div className="ck-ticker">
+        <span>FORJANDO SISTEMAS DURADOUROS · ARQUITETURA SÓLIDA · ENGENHARIA NÓRDICA · UPTIME 99.98% · DA DESCOBERTA AO DEPLOY · ᚠᛟᚱᚷᛖ ·&nbsp;&nbsp;</span>
       </div>
-      <div className="v2-hint">
-        <span>role · clique nos pontos</span>
-      </div>
-    </div>
+      <div className="hint">ROLE · NAVEGUE PELO COCKPIT</div>
+    </footer>
   );
 }
