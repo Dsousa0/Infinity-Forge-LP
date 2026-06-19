@@ -345,11 +345,6 @@ body.v2 {
   transition: max-height .4s var(--ease);
 }
 .v2-rune-card.expanded .v2-rune-desc { max-height: 200px; font-size: 14px; }
-.v2-rune-corner {
-  position: absolute; top: 12px; right: 14px;
-  font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em;
-  color: rgba(127,182,196,0.4);
-}
 .v2-card-num { position: absolute; top: 14px; right: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: .2em; color: var(--ember); }
 
 /* ── CHAPTER 2: PROCESS ── */
@@ -497,7 +492,7 @@ body.v2 {
   transition: border-color .2s;
 }
 .v2-contact-input:focus-visible,
-.v2-contact-textarea:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; border-color: var(--ember); background: rgba(201,138,75,0.04); }
+.v2-contact-textarea:focus-visible { outline: none; border-color: var(--ember); background: rgba(201,138,75,0.04); }
 .v2-contact-textarea { min-height: 120px; resize: vertical; font-family: var(--sans); }
 .v2-contact-submit { align-self: flex-start; margin-top: 6px; }
 

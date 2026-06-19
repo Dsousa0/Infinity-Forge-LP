@@ -19,12 +19,12 @@ body.v2 {
 
 /* ── scanline global ── */
 .ck-scanline {
-  position: fixed; left: 0; right: 0; height: 2px; z-index: 41; pointer-events: none;
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 41; pointer-events: none;
   background: linear-gradient(90deg, transparent, rgba(127,182,196,.5), transparent);
   box-shadow: 0 0 14px rgba(127,182,196,.4); opacity: .4;
   animation: ck-scan 7s linear infinite;
 }
-@keyframes ck-scan { 0% { top: -2%; } 100% { top: 102%; } }
+@keyframes ck-scan { from { transform: translateY(-10px); } to { transform: translateY(100vh); } }
 
 /* ── tag de cabeçalho de módulo (MÓDULO NN · Nome) ── */
 .mod-tag {
