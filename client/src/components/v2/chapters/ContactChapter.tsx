@@ -11,6 +11,7 @@ export default function ContactChapter({ t }: ContactChapterProps) {
 
   return (
     <div className="v2-chapter">
+      <div className="mod-tag">Módulo 07 · Contato</div>
       <div className="v2-contact">
         <div>
           <div className="sec-eyebrow">{t.contact.eyebrow}</div>

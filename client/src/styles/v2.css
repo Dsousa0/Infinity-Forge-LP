@@ -501,6 +501,10 @@ body.v2 {
 .v2-contact-textarea { min-height: 120px; resize: vertical; font-family: var(--sans); }
 .v2-contact-submit { align-self: flex-start; margin-top: 6px; }
 
+/* ── CONTACT: terminal-entry overrides (id-scoped) ── */
+#v2-contact input, #v2-contact textarea { background: rgba(127,182,196,.04); border: 1px solid var(--line); border-radius: 8px; color: var(--stone-3); font-family: var(--mono); transition: border-color .25s, box-shadow .25s; }
+#v2-contact input:focus, #v2-contact textarea:focus { outline: none; border-color: var(--ember); box-shadow: 0 0 0 1px var(--ember), 0 0 18px rgba(210,170,104,.25); }
+
 /* ── Accessibility: reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   .v2-sigil-ring,
