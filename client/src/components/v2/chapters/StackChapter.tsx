@@ -17,6 +17,7 @@ export default function StackChapter({ t }: StackChapterProps) {
     <div className="v2-chapter">
       <div className="v2-stack">
         <div>
+          <div className="mod-tag">Módulo 04 · Stack</div>
           <div className="sec-eyebrow">{t.stack.eyebrow}</div>
           <h2 className="sec-title" style={{ fontSize: 'clamp(32px, 3.6vw, 48px)' }}>
             {t.stack.title}
@@ -41,6 +42,7 @@ export default function StackChapter({ t }: StackChapterProps) {
         </div>
 
         <div className="v2-stack-orbit">
+          <div className="v2-radar-sweep" />
           <div className="v2-orbit-ring o1" />
           <div className="v2-orbit-ring o2" />
           <div className="v2-orbit-ring o3" />

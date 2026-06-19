@@ -431,6 +431,12 @@ body.v2 {
   position: relative; height: 520px;
   display: flex; align-items: center; justify-content: center;
 }
+.v2-radar-sweep {
+  position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+  background: conic-gradient(from 0deg, rgba(127,182,196,.18), transparent 25%);
+  animation: v2-sweep 6s linear infinite; mix-blend-mode: screen;
+}
+@keyframes v2-sweep { to { transform: rotate(360deg); } }
 .v2-orbit-ring { position: absolute; left: 50%; top: 50%; border: 1px dashed rgba(127,182,196,0.18); border-radius: 50%; }
 .v2-orbit-ring.o1 { width: 200px; height: 200px; margin: -100px 0 0 -100px; }
 .v2-orbit-ring.o2 { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
@@ -506,6 +512,7 @@ body.v2 {
   .v2-cta, .v2-rune-card, .v2-case, .v2-stage, .v2-tech-pill {
     transition: none !important;
   }
+  .v2-radar-sweep { animation: none; opacity: .12; }
 }
 
 @media (max-width: 1100px) {
