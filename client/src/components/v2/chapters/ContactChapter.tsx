@@ -11,9 +11,9 @@ export default function ContactChapter({ t }: ContactChapterProps) {
 
   return (
     <div className="v2-chapter">
-      <div className="mod-tag">Módulo 07 · Contato</div>
       <div className="v2-contact">
         <div>
+          <div className="mod-tag">Módulo 07 · Contato</div>
           <div className="sec-eyebrow">{t.contact.eyebrow}</div>
           <h2 className="sec-title" style={{ fontSize: 'clamp(36px, 4.2vw, 60px)' }}>
             {t.contact.title}

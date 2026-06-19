@@ -7,6 +7,7 @@ body.v2 {
     radial-gradient(ellipse at 80% 20%, rgba(210,170,104,.07), transparent 55%),
     radial-gradient(ellipse at 10% 80%, rgba(127,182,196,.06), transparent 55%),
     var(--ink);
+  scroll-behavior: smooth;
 }
 
 /* ── moldura + brackets ── */

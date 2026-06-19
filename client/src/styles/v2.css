@@ -17,15 +17,6 @@
   --r-md:       10px;
 }
 
-/* ── Body v2 background ── */
-body.v2 {
-  background:
-    radial-gradient(ellipse at 20% 10%, rgba(127,182,196,0.05), transparent 55%),
-    radial-gradient(ellipse at 80% 60%, rgba(201,138,75,0.04), transparent 50%),
-    var(--ink);
-  scroll-behavior: smooth;
-}
-
 /* ── Typography utilities (used across chapters) ── */
 .sec-eyebrow {
   font-family: var(--mono);
@@ -79,94 +70,6 @@ body.v2 {
   box-sizing: border-box;
 }
 
-/* Subtle grid background */
-.v2-grid-bg {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(127,182,196,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(127,182,196,0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-}
-
-/* ── TOP BAR ── */
-.v2-topbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 18px 36px;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(11,15,18,0.85), rgba(11,15,18,0));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-.v2-topbar > * { pointer-events: auto; }
-.v2-brand { display: flex; align-items: center; gap: 12px; }
-.v2-brand img { width: 36px; height: 36px; object-fit: contain; }
-.v2-brand-text { display: flex; flex-direction: column; line-height: 1.05; }
-.v2-brand-name {
-  font-family: var(--display); font-size: 14px; font-weight: 600;
-  letter-spacing: 0.08em; color: var(--stone-3); text-transform: uppercase;
-}
-.v2-brand-sub {
-  font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em;
-  color: rgba(127,182,196,0.55); text-transform: uppercase; margin-top: 3px;
-}
-
-/* ── CHAPTER NAV (right rail dots) ── */
-.v2-nav {
-  position: fixed; right: 28px; top: 50%; transform: translateY(-50%);
-  z-index: 45;
-  display: flex; flex-direction: column; gap: 6px;
-}
-.v2-nav-dot {
-  display: flex; align-items: center; gap: 14px;
-  background: transparent; border: 0; padding: 6px 0;
-  cursor: pointer; color: rgba(214,225,232,0.4);
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em;
-  text-transform: uppercase; transition: color .25s var(--ease);
-  flex-direction: row-reverse;
-}
-.v2-nav-dot::before {
-  content: ''; width: 22px; height: 1px; background: currentColor;
-  opacity: 0.5; transition: width .3s var(--ease), opacity .3s;
-}
-.v2-nav-dot:hover { color: var(--frost); }
-.v2-nav-dot:hover::before { width: 36px; opacity: 1; }
-.v2-nav-dot.active { color: var(--ember); }
-.v2-nav-dot.active::before { width: 50px; opacity: 1; background: var(--ember); }
-.v2-nav-num {
-  display: inline-block; min-width: 24px; text-align: right;
-  font-family: var(--mono); font-size: 10px;
-}
-
-/* ── BOTTOM BAR ── */
-.v2-bottombar {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 45;
-  padding: 18px 36px;
-  display: flex; justify-content: space-between; align-items: flex-end; gap: 32px;
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(11,15,18,0.85), rgba(11,15,18,0));
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-.v2-bottombar > * { pointer-events: auto; }
-.v2-chapter-info { display: flex; flex-direction: column; gap: 4px; }
-.v2-chapter-eyebrow {
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em;
-  color: rgba(127,182,196,0.55); text-transform: uppercase;
-}
-.v2-chapter-counter {
-  font-family: var(--display); font-size: 13px; font-weight: 600;
-  color: var(--stone-3); letter-spacing: 0.05em;
-}
-.v2-chapter-counter span { color: rgba(214,225,232,0.4); margin: 0 4px; }
-.v2-hint {
-  text-align: right;
-  font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
-  color: rgba(214,225,232,0.35); text-transform: uppercase;
-  display: flex; flex-direction: column; gap: 4px;
-}
 
 /* Progress bar */
 .v2-progress {
@@ -199,7 +102,6 @@ body.v2 {
 }
 .v2-cta-ghost:hover { border-color: var(--frost); background: rgba(127,182,196,0.06); }
 
-.v2-nav-dot:focus-visible,
 .v2-rune-card:focus-visible,
 .v2-stage:focus-visible,
 .v2-cta:focus-visible {
