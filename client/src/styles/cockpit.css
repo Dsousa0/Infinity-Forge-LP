@@ -77,3 +77,8 @@ body.v2 {
 @keyframes ck-tick { to { transform: translateX(-100%); } }
 @media (max-width: 900px) { .ck-bottombar { padding: 12px 24px; } .ck-ticker, .ck-bottombar .hint { display: none; } }
 @media (prefers-reduced-motion: reduce) { .ck-ticker span { animation: none; padding-left: 0; } }
+
+/* Conteúdo dos módulos deve limpar a NavRail fixa (visível só >900px) */
+@media (min-width: 901px) {
+  .v2-section { padding-left: max(8vw, 160px); }
+}
