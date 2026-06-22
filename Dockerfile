@@ -1,14 +1,10 @@
 # Stage 1: Build
 FROM node:20-alpine AS builder
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
-COPY patches/ ./patches/
-RUN pnpm install --no-frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-RUN pnpm build
+RUN npm run build
 
 # Stage 2: Production
 FROM node:20-alpine AS production
