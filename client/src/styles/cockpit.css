@@ -22,7 +22,7 @@ body.v2 {
 .ck-scanline {
   position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 41; pointer-events: none;
   background: linear-gradient(90deg, transparent, rgba(127,182,196,.5), transparent);
-  box-shadow: 0 0 14px rgba(127,182,196,.4); opacity: .4;
+  box-shadow: 0 0 14px rgba(127,182,196,.4); opacity: .22;
   animation: ck-scan 7s linear infinite;
 }
 @keyframes ck-scan { from { transform: translateY(-10px); } to { transform: translateY(100vh); } }
